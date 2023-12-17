@@ -22,3 +22,13 @@ class AI_NEMTYREV:
 
 
 //пример использования 
+python
+from ai_nemtyrev import AI_NEMTYREV
+
+model_path = "path_to_model"(путь к модели) 
+dataset_path = "path_to_dataset"(путь к дата сету) 
+
+ai = AI_NEMTYREV(model_path)
+ai.process_dataset(dataset_path)
+ai.close_model()
+// //
