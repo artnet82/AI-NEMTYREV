@@ -1,0 +1,24 @@
+import llama2
+import dataset_utils
+
+# Загрузка и инициализация модели Llama 2
+model = llama2.load_model("13b")
+
+# Загрузка датасета
+dataset = dataset_utils.load_dataset("path_to_dataset")
+
+# Перемешивание датасета
+dataset.shuffle()
+
+# Запуск модели на датасете
+for image, label in dataset:
+    prediction = model.predict(image)
+    
+    # Получение результата в виде определения объекта и названия
+    object_label = prediction["object"]
+    object_name = dataset.get_class_name(object_label)
+    
+    print("Объект:", object_name)
+
+# Завершение работы модели
+model.close() 
