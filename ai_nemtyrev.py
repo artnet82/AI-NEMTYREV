@@ -1,10 +1,10 @@
 python
-import llama2
+import nemtyrev_ai
 import dataset_utils
 
 class AI_NEMTYREV:
     def init(self, model_path):
-        self.model = llama2.load_model(model_path)
+        self.model = nemtyrev_ai.load_model(model_path)
     
     def process_dataset(self, dataset_path):
         dataset = dataset_utils.load_dataset(dataset_path)
