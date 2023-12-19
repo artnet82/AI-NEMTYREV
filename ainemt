@@ -1,9 +1,9 @@
-import llama2
+
 import ai_nemtyrev
 import dataset_utils
 
 # Загрузка и инициализация модели Llama 2
-model = llama2.load_model("13b")
+model = nemtyrev_ai.load_model("13b")
 
 # Загрузка датасета
 dataset = dataset_utils.load_dataset("path_to_dataset")
